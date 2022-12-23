@@ -56,24 +56,31 @@
         </div>
       </header>
       <main class="mdl-layout__content">
-        <p></p>
-        <img
-          src="./images/notebook-animation.svg"
-          alt="Computer"
-          width="25%"
-          height="25%"
-        />
-        <p></p>
-        <!-- Raised button with ripple -->
-        <button
+        <form action="#">
+          <p>Enter how many digits of Pi you want</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="number"
+              step=".01"
+              placeholder="e.g. 4"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="timesThroughLoop"
+              aria-label="digits of Pi"
+            />
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+          <!-- Raised button with ripple -->
+          <button
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="myButtonClicked()"
-        >
-          Say "Hello, World!"
-        </button>
-        <!-- basic text -->
-        <p></p>
-        <div id="hello-world"></div>
+          onclick="enterClicked()"
+          >
+            Calculate
+          </button>
+          <br />
+          <br />
+          <div id="answer"></div>
+        </form>
       </main>
     </div>
   </body>
