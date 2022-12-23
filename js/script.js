@@ -16,15 +16,17 @@ if (navigator.serviceWorker) {
 }
 
 function myButtonClicked() {
-  const timesThroughLoop =  parseInt(document.getElementById("times-through-loop").value)
+  const timesThroughLoop = parseInt(
+    document.getElementById("times-through-loop").value
+  )
   var counter = 0
   var piAnswer = 0
 
   while (counter < timesThroughLoop) {
-    piAnswer = piAnswer + ((4 / (1 + (2 *counter))) * (-1) ** counter)
+    piAnswer = piAnswer + (4 / (1 + 2 * counter)) * (-1) ** counter
     counter++
   }
-  
+
   document.getElementById("answer").innerHTML =
     "Pi to " + timesThroughLoop + " digits is " + piAnswer + "."
 }
